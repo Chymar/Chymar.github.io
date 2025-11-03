@@ -19,11 +19,13 @@
   <i>Premetto che questo sito è realizzato esclusivamente a scopo didattico e in chiave goliardica, con l'obiettivo di strappare un sorriso. (Per chi non avesse letto il libro, attenzione: rischio spoiler!)</i>
 <br>
 <i>Le storie presenti sul sito sono frutto di una combinazione di storie realmente accadute e di pura fantasia. Dall'opera, che consiglio caldamente di leggere nella sua versione integrale, ho tratto lo stile narrativo e la struttura frammentaria con il solo intento di omaggiare Calvino.</i>
-<p>Finite le premesse, clicca il link per iniziare a leggere la storia</p>
-<button onclick="document.body.style.backgroundColor = 'random'">Inizia a leggere</button>
-  <ul>
-    <li><a href="storia1.html">Se una notte di inverno un viaggiatore</a></li>
-  </ul>
-  <br/>  
+<p>Finite le premesse, clicca il link per iniziare a leggere la storia: <a href="storia1.html">Se una notte di inverno un viaggiatore</a></p>
+<button onclick="document.body.style.backgroundColor = changeRandomColor()">Cambia colore dello sfondo</button>
+<script>
+  function changeRandomColor() { 
+    let color = "#" + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0');
+    return color;
+  }
+</script>
 </body>
 </html>
